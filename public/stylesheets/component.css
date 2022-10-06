@@ -1,0 +1,92 @@
+header {
+  background: rgb(75, 180, 58);
+  background: linear-gradient(
+    90deg,
+    rgba(75, 180, 58, 1) 0%,
+    rgba(12, 247, 209, 1) 100%,
+    rgba(69, 239, 252, 1) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  margin-right: 2.5em;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: gainsboro;
+}
+
+.container-card {
+  background-color: gainsboro;
+  padding: 0.1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-turn {
+  background-color: rgba(243, 236, 250, 0.668);
+  max-width: 35em;
+  
+  margin: 1em;
+  border: solid black 1px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.card-turn h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.card-turn p {
+  padding: 2px;
+}
+
+.card-turn .cont-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 1px black;
+  padding: 5px;
+}
+
+.card-turn .cont-button button {
+  width: 10em;
+  height: 2.5em;
+  margin: 2px;
+  border-radius: 15px;
+  color: rgb(253, 252, 252);
+  font-size: 1em;
+}
+
+.card-turn .cont-button button.editar {
+  background-color: rgba(41, 255, 41, 0.813);
+  border: none;
+}
+
+.card-turn .cont-button button.eliminar {
+  background-color: rgba(233, 8, 30, 0.813);
+  border: none;
+}
+
+footer {
+  background: rgb(75, 180, 58);
+  background: linear-gradient(
+    90deg,
+    rgba(75, 180, 58, 1) 0%,
+    rgba(12, 247, 209, 1) 100%,
+    rgba(69, 239, 252, 1) 100%
+  );
+}

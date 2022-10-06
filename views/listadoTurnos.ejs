@@ -1,0 +1,35 @@
+<%- include("header") -%>
+<h1>LISTADO DE TURNOS</h1>
+<section>
+  <div class="container-card">
+    <% for (let i=0; i < turnos.length; i++) { %>
+    <div class="card-turn">
+      <h2><%= turnos[i].code%></h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit..
+      </p>
+      <h2><%= turnos[i].box%></h2>
+      <div class="cont-button">
+        <button type="submit" class="editar">Editar</button>
+        <button type="submit" class="eliminar">Eliminar</button>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+<div class="container-">
+  <h1>Formulario de creacion</h1>
+  <form action="/turnos/crear" method="POST">
+    <div>
+      <label for="turno">turno</label>
+      <input type="text" name="turno" id="turno" />
+    </div>
+    <div>
+      <label for="box">box</label>
+      <input type="text" name="box" id="box" />
+    </div>
+    <button type="submit">enviar</button>
+  </form>
+</div>
+<%- include("footer") -%>

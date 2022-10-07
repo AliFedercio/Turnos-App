@@ -1,0 +1,16 @@
+<%- include("header") -%>
+<div class="container-">
+    <h1>Formulario de creacion</h1>
+    <form action="/turnos/crear" method="POST">
+      <div>
+        <label for="turno">turno</label>
+        <input type="text" name="turno" id="turno" />
+      </div>
+      <div>
+        <label for="box">box</label>
+        <input type="text" name="box" id="box" />
+      </div>
+      <button type="submit">enviar</button>
+    </form>
+  </div>
+<%- include("footer") -%>

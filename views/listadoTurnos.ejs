@@ -11,25 +11,17 @@
       </p>
       <h2><%= turnos[i].box%></h2>
       <div class="cont-button">
-        <button type="submit" class="editar">Editar</button>
-        <button type="submit" class="eliminar">Eliminar</button>
+        <a href="/turnos/editar/<%=Turno.id%>"><button type="submit" class="editar">Editar</button></a>
+       <a href=""> <button type="reset" class="eliminar">Eliminar</button></a>
       </div>
     </div>
     <% } %>
   </div>
 </section>
-<div class="container-">
-  <h1>Formulario de creacion</h1>
-  <form action="/turnos/crear" method="POST">
-    <div>
-      <label for="turno">turno</label>
-      <input type="text" name="turno" id="turno" />
-    </div>
-    <div>
-      <label for="box">box</label>
-      <input type="text" name="box" id="box" />
-    </div>
-    <button type="submit">enviar</button>
-  </form>
-</div>
 <%- include("footer") -%>
+
+
+
+
+
+

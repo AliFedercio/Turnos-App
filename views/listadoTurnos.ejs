@@ -6,13 +6,12 @@
     <div class="card-turn">
       <h2><%= turnos[i].code%></h2>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit..
+       <%=turnos[i].info%>
       </p>
       <h2><%= turnos[i].box%></h2>
       <div class="cont-button">
-        <a href="/turnos/editar/<%=Turno.id%>"><button type="submit" class="editar">Editar</button></a>
-       <a href=""> <button type="reset" class="eliminar">Eliminar</button></a>
+        <a href="/turnos/editar/<%=turnos[i].id%>" class="editar">EDITAR</a>
+       <a href="/turnos/borrar/<%=turnos[i].id%>" class="eliminar">ELIMINAR</a>
       </div>
     </div>
     <% } %>

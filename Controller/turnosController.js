@@ -9,25 +9,50 @@ let controller = {
         })
     },
     crear: function(req, res){
-        res.render("formulario")
+        res.render("crear")
     },
     guardar: function(req, res){
         db.Turno.create({
             code: req.body.turno,
+            info: req.body.info,
             box: req.body.box
         });
         res.redirect("/turnos");
     },
-    editar:function(req, res){
-        let pedidoCod = db.Turno.findByPk(req.params.id);
-        let pedidoBox = db.Turno.findAll(req.body.box);
-        Promise.all([pedidoCod, pedidoBox])
-        .then(function([cod, box]){
-           return res.render("edicion", {turnos:cod, turnos:box});
+    form:function(req, res){
+         db.Turno.findByPk(req.params.id)
+        .then(function(turno){
+            res.render("editar", {turno: turno});
         })
+    },
+    editar:function(req, res){ 
+        db.Turno.update({
+            code: req.body.turno,
+            info: req.body.info,
+            box: req.body.box
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect("/turnos");
+    },
+    borrar: function(req, res){
+        db.Turno.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/turnos")
     }
 };
 
 
 
 module.exports = controller;
+
+
+
+
+

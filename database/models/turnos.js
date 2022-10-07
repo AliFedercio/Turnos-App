@@ -11,6 +11,9 @@ module.exports = function(sequelize, dataTypes){
         code: {
             type: dataTypes.STRING
         },
+        info:{
+            type: dataTypes.STRING
+        },
         box: {
             type: dataTypes.STRING
         }, 

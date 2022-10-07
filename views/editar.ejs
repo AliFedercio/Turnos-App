@@ -1,0 +1,20 @@
+<%- include("header") -%>
+<div class="container-">
+    <h1>Formulario de edicion</h1>
+    <form action="/turnos/editar/<%=turno.id%>" method="POST">
+      <div>
+        <label for="turno">turno</label>
+        <input type="text" name="turno" id="turno" value="<%= turno.code %>" />
+      </div>
+      <div>
+        <label for="descripcion">Descripcion</label>
+        <input type="text" name="info" id="descripcion" value="<%= turno.info %>" />
+      </div>
+      <div>
+        <label for="box">box</label>
+        <input type="text" name="box" id="box" value="<%= turno.box %>"/>
+      </div>
+      <button type="submit">enviar</button>
+    </form>
+  </div>
+<%- include("footer") -%>

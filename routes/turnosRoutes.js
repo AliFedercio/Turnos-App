@@ -5,7 +5,7 @@ const turnosController = require("../Controller/turnosController");
 /* RUTAS DEL CRUD */
 
 /* LISTAR TURNOS */
-router.get("/", turnosController.listar);
+router.get("/", turnosController.conFecth);
 
 /*CREACION*/
 router.get("/crear", turnosController.crear);
@@ -22,7 +22,7 @@ router.post("/editar/:id", turnosController.editar);
 
 /* ELIMINAR TURNO */
 
-router.delete("/borrar/:id", turnosController.borrar);
+router.get("/borrar/:id", turnosController.borrar);
 
 
 

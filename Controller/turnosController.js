@@ -2,12 +2,12 @@ const db = require("../database/models");
 
 
 let controller = {
-    listar: function(req, res){
+    /* listar: function(req, res){
         db.Turno.findAll()
         .then(function(turnos){
             return res.render("listadoTurnos", {turnos:turnos})
         })
-    },
+    }, */
     crear: function(req, res){
         res.render("crear")
     },
@@ -45,7 +45,15 @@ let controller = {
             }
         })
         res.redirect("/turnos")
-    }
+    },
+
+    conFecth: fetch("http://localhost:3000/turnos")
+                    .then(function(respuesta){
+                        return respuesta.json();
+                    })
+                    .then(function(informacion){
+                        console.log(informacion);
+                    })
 };
 
 

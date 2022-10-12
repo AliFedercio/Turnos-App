@@ -1,5 +1,5 @@
 const db = require("../database/models");
-const fetch = require('node-fetch');
+
 
 
 
@@ -48,9 +48,6 @@ let controller = {
         })
         res.redirect("/turnos")
     }
-    
-   
-    
 };
 
 

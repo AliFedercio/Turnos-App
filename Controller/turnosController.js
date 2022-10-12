@@ -1,13 +1,15 @@
 const db = require("../database/models");
+const fetch = require('node-fetch');
+
 
 
 let controller = {
-    /* listar: function(req, res){
+     listar: function(req, res){
         db.Turno.findAll()
         .then(function(turnos){
-            return res.render("listadoTurnos", {turnos:turnos})
+            return res.render("listadoTurnos", {turnos})
         })
-    }, */
+    }, 
     crear: function(req, res){
         res.render("crear")
     },
@@ -45,21 +47,80 @@ let controller = {
             }
         })
         res.redirect("/turnos")
-    },
-
-    conFecth: fetch("http://localhost:3000/turnos")
-                    .then(function(respuesta){
-                        return respuesta.json();
-                    })
-                    .then(function(informacion){
-                        console.log(informacion);
-                    })
+    }
+    
+   
+    
 };
 
 
 
 module.exports = controller;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* listado2:(req, res)=>{
+        fetch('http://localhost:3000/turnos')
+        .then(response => response.json())
+        .then(turnos =>{
+              res.render('listadoTurnos', {turnos: turnos})
+        })
+    },
+    listado: (req, res)=>{
+        fetch('http://localhost:3000/turnos')
+         //fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(function(datos){
+            console.log(datos)
+        })
+    } */
 
 
 

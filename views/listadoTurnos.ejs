@@ -1,6 +1,6 @@
 <%- include("header") -%>
 <h1>LISTADO DE TURNOS</h1>
-<section>
+<section class="list-turn">
   <div class="container-card">
     <% for (let i=0; i < turnos.length; i++) { %>
     <div class="card-turn">
@@ -11,7 +11,7 @@
       <h2><%= turnos[i].box%></h2>
       <div class="cont-button">
         <a href="/turnos/editar/<%=turnos[i].id%>" class="editar">EDITAR</a>
-       <a href="/turnos/borrar/<%=turnos[i].id%>" class="eliminar">ELIMINAR</a>
+       <a href="/turnos/borrar/<%=turnos[i].id%>" class="eliminar" >ELIMINAR</a>
       </div>
     </div>
     <% } %>

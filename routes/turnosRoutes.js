@@ -5,9 +5,10 @@ const turnosController = require("../Controller/turnosController");
 /* RUTAS DEL CRUD */
 
 /* LISTAR TURNOS */
-router.get("/", turnosController.conFecth);
+router.get("/", turnosController.listar);
 
 /*CREACION*/
+
 router.get("/crear", turnosController.crear);
 router.post("/crear", turnosController.guardar);
 
